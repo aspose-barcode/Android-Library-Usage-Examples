@@ -1,0 +1,41 @@
+apply plugin: 'maven-publish'
+
+buildscript {
+    repositories {
+        google()
+        mavenCentral()
+        flatDir {
+            dirs 'buildLibs/'
+        }
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.4.3'
+        }
+}
+
+project.ext {
+    gp = rootProject.ext
+    libraryVersion = project.ext.get('library_version')
+    productName = 'Aspose Barcode for Android examples'
+    organizationName = 'Aspose'
+}
+
+allprojects {
+    repositories {
+        maven { url "https://repository.aspose.com/repo/" }
+        google()
+        mavenCentral()
+        maven { url "https://maven.google.com" }
+        maven { url "http://repo.maven.apache.org/maven2" }
+        maven { url "https://mvnrepository.com/artifact/" }
+        maven { url "http://central.maven.org/maven2/" }
+        flatDir {
+            dirs 'libs'
+        }
+    }
+    group = 'com.aspose.barcode'
+    version '1.0.0'
+
+
+
+}
