@@ -1,0 +1,5 @@
+rootProject.name = 'aspose-barcode-android-jar-examples'
+
+include  ':barcode_examples'
+project(':barcode_examples').projectDir = "$rootDir/barcode_examples" as File
+project(':barcode_examples').name = "barcode_examples"
